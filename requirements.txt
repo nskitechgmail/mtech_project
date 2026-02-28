@@ -1,0 +1,41 @@
+# ╔══════════════════════════════════════════════════════════════════════╗
+# ║  Smart City ANPR System — Python Dependencies                       ║
+# ║  SRM Institute of Science and Technology                            ║
+# ╚══════════════════════════════════════════════════════════════════════╝
+#
+# INSTALL (recommended order):
+#   pip install -r requirements.txt
+#
+# NOTE: tkinter ships with Python on Windows/macOS.
+#       On Ubuntu/Debian:  sudo apt install python3-tk
+#
+# Python 3.9+ required | GPU strongly recommended for real-time use
+
+# ── Core computer vision ───────────────────────────────────────────────────
+opencv-python>=4.8.0        # Video capture, image processing, drawing
+numpy>=1.24.0               # Array operations
+Pillow>=10.0.0              # PIL for image I/O
+
+# ── YOLO object detection ─────────────────────────────────────────────────
+ultralytics>=8.1.0          # YOLOv8/v9 (auto-downloads weights on first run)
+                            # Includes: torch, torchvision, tqdm, pyyaml, etc.
+
+# ── OCR ───────────────────────────────────────────────────────────────────
+easyocr>=1.7.0              # EasyOCR (auto-downloads language models)
+
+# ── GenAI Enhancement (Real-ESRGAN) ──────────────────────────────────────
+basicsr>=1.4.2              # Base SR framework
+realesrgan>=0.3.0           # Real-ESRGAN wrapper
+                            # Weights downloaded automatically on first run (~64 MB)
+
+# ── Face anonymisation ────────────────────────────────────────────────────
+mediapipe>=0.10.0           # Face detection for privacy compliance
+
+# ── Reports / utilities ───────────────────────────────────────────────────
+pandas>=2.0.0               # Optional: richer report generation
+tqdm>=4.65.0                # Progress bars
+
+# ── Optional: GPU acceleration (uncomment if CUDA available) ──────────────
+# torch>=2.0.0+cu118         # PyTorch with CUDA 11.8
+# torchvision>=0.15.0+cu118
+# Install via: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
